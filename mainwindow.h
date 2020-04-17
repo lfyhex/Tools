@@ -2,8 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QtGui>
-#include <QPoint>
+#include <QTreeView>
+#include <QDirModel>
+#include <QSplitter>
 
 namespace Ui {
     class MainWindow;

@@ -70,7 +70,7 @@ void Base64ConvertDlg::onT2P()
     QString str = ui->textEdit->toPlainText().trimmed();
     if (!str.isEmpty())
     {
-        QByteArray ary = str.toAscii();
+        QByteArray ary = str.toLatin1();
         m_ary = QByteArray::fromBase64(ary);
         QPixmap pix;
         pix.loadFromData(m_ary);

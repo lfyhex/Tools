@@ -66,8 +66,8 @@ void BinaryFileEditDlg::onEdit()
                 while (iter.hasNext())
                 {
                     iter.next();
-                    QByteArray aryKey = iter.key().toAscii();
-                    QByteArray aryVal = iter.value().toAscii();
+                    QByteArray aryKey = iter.key().toLatin1();
+                    QByteArray aryVal = iter.value().toLatin1();
 
                     int nidx = ary.indexOf(aryKey);
                     if (nidx > 0)

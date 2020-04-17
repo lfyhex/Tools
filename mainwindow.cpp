@@ -4,6 +4,13 @@
 #include <QDomNode>
 #include <QIcon>
 #include <QTextStream>
+#include <QFileDialog>
+#include <QMessageBox>
+#include <QProcess>
+#include <QDesktopServices>
+#include <QInputDialog>
+#include <QResource>
+
 #include "productextenddlg.h"
 #include "helpdlg.h"
 #include "base64convertdlg.h"

@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>623</width>
+    <height>492</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
+     <widget class="QFrame" name="frmMain">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="margin">
+        <number>0</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QLineEdit" name="lineEdit">
+           <property name="toolTip">
+            <string>输入导入后的替换名称</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnImport">
+           <property name="toolTip">
+            <string>废弃</string>
+           </property>
+           <property name="text">
+            <string>Import</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnExport">
+           <property name="toolTip">
+            <string>废弃</string>
+           </property>
+           <property name="text">
+            <string>Export</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QTreeView" name="treeViewSrc"/>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout">
+           <item>
+            <widget class="QPushButton" name="btnRun">
+             <property name="toolTip">
+              <string>左边导入文件到右边(Install或Resource目录下)，不区分操作系统</string>
+             </property>
+             <property name="text">
+              <string>---&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnFiletoDir">
+             <property name="toolTip">
+              <string>左边文件导入右边目录</string>
+             </property>
+             <property name="text">
+              <string>file to dir</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="chkEnglish">
+             <property name="text">
+              <string>Get English P</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="chkMac">
+             <property name="toolTip">
+              <string>mac系统，默认为windows</string>
+             </property>
+             <property name="text">
+              <string>Mac</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="chkInstall">
+             <property name="text">
+              <string>Install</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QTreeView" name="treeViewDest"/>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTextEdit" name="resultShow"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>623</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuTools">
+    <property name="title">
+     <string>Tools</string>
+    </property>
+    <addaction name="actImport"/>
+    <addaction name="actDel"/>
+    <addaction name="actTest"/>
+    <addaction name="actRemoveFileInDir"/>
+    <addaction name="actReName"/>
+    <addaction name="actionRenameFileNameInDir"/>
+    <addaction name="actCopyXML"/>
+    <addaction name="actClear"/>
+    <addaction name="actUpdate"/>
+    <addaction name="actEncryString"/>
+    <addaction name="actProductet"/>
+    <addaction name="separator"/>
+    <addaction name="actionEncodeURL"/>
+    <addaction name="actionDecodeURL"/>
+    <addaction name="separator"/>
+    <addaction name="actionBase64DECoder"/>
+    <addaction name="actionBinaryFileEditor"/>
+   </widget>
+   <widget class="QMenu" name="menuRcc">
+    <property name="title">
+     <string>Rcc</string>
+    </property>
+    <addaction name="actRccGenFiles"/>
+    <addaction name="actToRcc"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actOperateMethod"/>
+   </widget>
+   <addaction name="menuTools"/>
+   <addaction name="menuRcc"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actImport">
+   <property name="text">
+    <string>&amp;Import</string>
+   </property>
+  </action>
+  <action name="actDel">
+   <property name="text">
+    <string>&amp;Delete</string>
+   </property>
+   <property name="toolTip">
+    <string>Delete</string>
+   </property>
+   <property name="statusTip">
+    <string>删除左侧选择的目录下的文件及目录</string>
+   </property>
+   <property name="whatsThis">
+    <string/>
+   </property>
+  </action>
+  <action name="actTest">
+   <property name="text">
+    <string>test</string>
+   </property>
+   <property name="toolTip">
+    <string>test</string>
+   </property>
+   <property name="statusTip">
+    <string>测试用</string>
+   </property>
+  </action>
+  <action name="actRemoveFileInDir">
+   <property name="text">
+    <string>&amp;RemoveFileInDir</string>
+   </property>
+   <property name="toolTip">
+    <string>RemoveFileInDir</string>
+   </property>
+   <property name="statusTip">
+    <string>在左侧选择的目录中删除特定文件</string>
+   </property>
+  </action>
+  <action name="actCopyXML">
+   <property name="text">
+    <string>&amp;CopyXML</string>
+   </property>
+   <property name="toolTip">
+    <string>CopyXML</string>
+   </property>
+   <property name="statusTip">
+    <string>复制左侧选择目录下的代理xml文件,定制使用</string>
+   </property>
+  </action>
+  <action name="actClear">
+   <property name="text">
+    <string>Clear Output</string>
+   </property>
+   <property name="toolTip">
+    <string>Clear Output</string>
+   </property>
+   <property name="statusTip">
+    <string>清空输出</string>
+   </property>
+  </action>
+  <action name="actReName">
+   <property name="text">
+    <string>ReNameHelpDirWithFile</string>
+   </property>
+   <property name="toolTip">
+    <string>ReNameHelpDirWithFile</string>
+   </property>
+   <property name="statusTip">
+    <string>重命名，去掉多余help，目标为左侧选择目录</string>
+   </property>
+  </action>
+  <action name="actUpdate">
+   <property name="text">
+    <string>&amp;Update</string>
+   </property>
+   <property name="toolTip">
+    <string>Update</string>
+   </property>
+   <property name="statusTip">
+    <string>更新树</string>
+   </property>
+  </action>
+  <action name="actEncryString">
+   <property name="text">
+    <string>Encry Strings</string>
+   </property>
+   <property name="toolTip">
+    <string>Encry Strings</string>
+   </property>
+   <property name="statusTip">
+    <string>读取左侧文件并生成加密串</string>
+   </property>
+  </action>
+  <action name="actProductet">
+   <property name="text">
+    <string>product_extend</string>
+   </property>
+   <property name="statusTip">
+    <string>编辑product_extend.xml文件</string>
+   </property>
+  </action>
+  <action name="actRccGenFiles">
+   <property name="text">
+    <string>Generate Files</string>
+   </property>
+   <property name="statusTip">
+    <string>从Rcc文件生成原始文件</string>
+   </property>
+  </action>
+  <action name="actToRcc">
+   <property name="text">
+    <string>ToRcc</string>
+   </property>
+   <property name="statusTip">
+    <string>生成Rcc文件</string>
+   </property>
+  </action>
+  <action name="actOperateMethod">
+   <property name="text">
+    <string>&amp;Operate method</string>
+   </property>
+   <property name="statusTip">
+    <string>操作方法指南</string>
+   </property>
+  </action>
+  <action name="actionRenameFileNameInDir">
+   <property name="text">
+    <string>RenameFileNameInDir</string>
+   </property>
+   <property name="statusTip">
+    <string>文件改名</string>
+   </property>
+  </action>
+  <action name="actionDelete_string_in_file">
+   <property name="text">
+    <string>Delete string in file</string>
+   </property>
+   <property name="statusTip">
+    <string>在文件中删除字符串</string>
+   </property>
+  </action>
+  <action name="actionEncodeURL">
+   <property name="text">
+    <string>EncodeURL</string>
+   </property>
+  </action>
+  <action name="actionDecodeURL">
+   <property name="text">
+    <string>DecodeURL</string>
+   </property>
+  </action>
+  <action name="actionBase64DECoder">
+   <property name="text">
+    <string>Base64DECoder...</string>
+   </property>
+  </action>
+  <action name="actionBinaryFileEditor">
+   <property name="text">
+    <string>BinaryFileEditor...</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
